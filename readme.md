@@ -88,7 +88,8 @@ Agrishift-AI/
 ├── index.html                  # Vite HTML entry point
 ├── package.json                # Dependencies + scripts
 ├── package-lock.json           # Locked dependency tree
-├── readme.md                   # This file
+├── readme.md                   # Project overview & quickstart
+├── PROCEDURE.md                # Full implementation procedure & dev guide
 ├── vite.config.js              # Vite + React + Tailwind plugins
 └── src/
     ├── main.jsx                # React root, mounts <App /> in StrictMode
@@ -98,7 +99,8 @@ Agrishift-AI/
     │   └── hero-bg.png         # Full-bleed hero background (2.6 MB)
     └── components/
         ├── Navbar.jsx          # Top navigation bar
-        ├── Hero.jsx            # Hero section, composes FeatureCard + LoginCard
+        ├── Hero.jsx            # Hero section, composes FeatureCard + LoginCard + HeroModal
+        ├── HeroModal.jsx       # Interactive modal manager for buttons & telemetry
         ├── FeatureCard.jsx     # Reusable feature highlight card
         └── LoginCard.jsx       # Login form panel
 ```
