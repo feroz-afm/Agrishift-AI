@@ -61,12 +61,17 @@ d:/Agrishift-AI/
     ├── index.css                # Global CSS with Tailwind v4 `@theme`
     ├── assets/
     │   └── hero-bg.png          # High-resolution satellite landscape background
-    └── components/
-        ├── Navbar.jsx           # Top navigation bar with branding & anchors
-        ├── Hero.jsx             # Hero section managing CTA buttons, layout & state
+        ├── Navbar.jsx           # Sticky navigation bar with mobile drawer & active blur
+        ├── Hero.jsx             # Hero section with primary CTAs & orbital metrics (#home)
+        ├── Features.jsx         # 6-card core capabilities grid (#features)
+        ├── NasaData.jsx         # NASA satellite constellation telemetry engine (#nasa-data)
+        ├── HowItWorks.jsx       # 3-step automated satellite-to-tractor workflow (#how-it-works)
+        ├── Impact.jsx           # Field-validated ecological & financial results (#impact)
+        ├── About.jsx            # Mission, data standards & final CTA banner (#about)
+        ├── Footer.jsx           # Comprehensive footer with links & status
         ├── HeroModal.jsx        # Interactive modal manager for telemetry, advisory & ROI
         ├── FeatureCard.jsx      # Glassmorphic feature card with interactive triggers
-        └── LoginCard.jsx        # Glassmorphic farmer login authentication card
+        └── LoginCard.jsx        # Standalone auth component (reserved for dedicated login route/modal)
 ```
 
 ---

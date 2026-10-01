@@ -97,12 +97,17 @@ Agrishift-AI/
     ├── index.css               # Tailwind import + global base styles
     ├── assets/
     │   └── hero-bg.png         # Full-bleed hero background (2.6 MB)
-    └── components/
-        ├── Navbar.jsx          # Top navigation bar
-        ├── Hero.jsx            # Hero section, composes FeatureCard + LoginCard + HeroModal
-        ├── HeroModal.jsx       # Interactive modal manager for buttons & telemetry
-        ├── FeatureCard.jsx     # Reusable feature highlight card
-        └── LoginCard.jsx       # Login form panel
+        ├── Navbar.jsx          # Sticky navigation bar with mobile drawer
+        ├── Hero.jsx            # Hero section with CTAs & live telemetry bar (#home)
+        ├── Features.jsx        # Core architectural capabilities section (#features)
+        ├── NasaData.jsx        # NASA Earth observation sensor engine (#nasa-data)
+        ├── HowItWorks.jsx      # Automated 3-step satellite-to-tractor workflow (#how-it-works)
+        ├── Impact.jsx          # Verified ecological & economic field results (#impact)
+        ├── About.jsx           # Mission, data standards & final CTA banner (#about)
+        ├── Footer.jsx          # Global footer with status & navigation
+        ├── HeroModal.jsx       # Interactive modal manager for telemetry, advisory & ROI
+        ├── FeatureCard.jsx     # Reusable feature card with interactive triggers
+        └── LoginCard.jsx       # Standalone login card (reserved for auth modal/route)
 ```
 
 ---
@@ -112,14 +117,21 @@ Agrishift-AI/
 ### Entry flow
 
 ```
-index.html  →  src/main.jsx  →  src/App.jsx  →  <Navbar /> + <Hero />
-                                                     ├── <FeatureCard /> × 2
-                                                     └── <LoginCard />
+index.html  →  src/main.jsx  →  src/App.jsx
+                                 ├── <Navbar /> (Sticky + Mobile Drawer)
+                                 ├── <Hero /> (#home)
+                                 ├── <Features /> (#features)
+                                 ├── <NasaData /> (#nasa-data)
+                                 ├── <HowItWorks /> (#how-it-works)
+                                 ├── <Impact /> (#impact)
+                                 ├── <About /> (#about)
+                                 ├── <Footer />
+                                 └── <HeroModal /> (Global telemetry & simulator dialogs)
 ```
 
 `main.jsx` mounts `<App />` inside `React.StrictMode`. StrictMode double-invokes renders in development to surface side-effect bugs — keep it enabled.
 
-`App.jsx` is intentionally thin: it only composes the two top-level sections. As the site grows, this is where a router and shared layout would be introduced.
+`App.jsx` cleanly composes all sections and coordinates active modal dialog state.
 
 ### State and data
 
@@ -216,14 +228,13 @@ The page is built to be keyboard-navigable and screen-reader friendly:
 
 ## Known Issues & TODOs
 
-1. **`hero-bg.png` is 2.6 MB** — the vast majority of the page weight and it blocks first paint. Convert to WebP/AVIF (target ~150–300 kB).
-2. **Unused dependencies** — `framer-motion` and `lucide-react` are installed but never imported. Either use `lucide-react` in place of emoji icons or remove both.
-3. **"Inter" is declared but never loaded** — the font stack lists Inter first, but no `@font-face` or Google Fonts `<link>` exists, so every load falls back to `system-ui`. Either add the font or drop it from the stack.
-4. **Unresolved nav anchors** — `#nasa-data`, `#how-it-works`, `#impact`, and `#about` are valid links but their target sections do not exist yet. Only `#home` and `#features` resolve today.
-5. **No mobile navigation** — section links are hidden below `md` with no hamburger/menu replacement.
-6. **No login handler** — `LoginCard` discards credentials.
-7. **No tests, linting, or typechecking** — no ESLint/Prettier config and no `test` script.
-8. **Empty `readme.md`** — this document replaces the placeholder.
+1. **`hero-bg.png` is 2.6 MB** — Convert to WebP/AVIF (target ~150–300 kB) for faster initial paint.
+2. ~~**Unused dependencies**~~ — *Resolved.* `lucide-react` icons are now imported across all sections and modals.
+3. ~~**"Inter" font loading**~~ — *Resolved.* Google Fonts preconnect and Inter stylesheet are configured in `index.html`.
+4. ~~**Unresolved nav anchors**~~ — *Resolved.* Dedicated sections created for `#home`, `#features`, `#nasa-data`, `#how-it-works`, `#impact`, and `#about`.
+5. ~~**No mobile navigation**~~ — *Resolved.* Responsive mobile drawer with hamburger toggle added in `Navbar.jsx`.
+6. **Backend integration** — Wire `LoginCard` and consultative modal submissions to actual API / database endpoints.
+7. **Automated Testing** — Add Vitest and Playwright test suites.
 
 ---
 
