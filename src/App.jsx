@@ -1,27 +1,35 @@
+import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Features from "./components/Features";
+import NasaData from "./components/NasaData";
+import HowItWorks from "./components/HowItWorks";
+import Impact from "./components/Impact";
+import About from "./components/About";
 import Footer from "./components/Footer";
+import HeroModal from "./components/HeroModal";
 
 export default function App() {
+  const [activeModal, setActiveModal] = useState(null);
+
   return (
-    <div
-      className="
-      min-h-screen
-      bg-[#0b1220]
-      text-white
-      selection:bg-green-400
-      selection:text-black
-      "
-    >
-      <Navbar />
+    <div className="min-h-screen bg-[#060b17] text-white selection:bg-green-400 selection:text-black">
+      <Navbar onOpenModal={setActiveModal} />
 
       <main>
-        <Hero />
+        <Hero onOpenModal={setActiveModal} />
         <Features />
+        <NasaData onOpenModal={setActiveModal} />
+        <HowItWorks onOpenModal={setActiveModal} />
+        <Impact onOpenModal={setActiveModal} />
+        <About onOpenModal={setActiveModal} />
       </main>
 
       <Footer />
+
+      {activeModal && (
+        <HeroModal type={activeModal} onClose={() => setActiveModal(null)} />
+      )}
     </div>
   );
 }
