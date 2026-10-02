@@ -218,4 +218,4 @@ mt-6
 1. **NASA API Ingestion:** Wire `HeroModal.jsx` to live NASA Earthdata API endpoints (CMR / GIBS / POWER).
 2. **Mobile Navigation Drawer:** Implement a hamburger toggle button in `Navbar.jsx` for screens below `md`.
 3. **Authentication Backend:** Connect `LoginCard.jsx` to an identity provider (Firebase Auth, Supabase, or Auth0).
-4. **Hero Image Optimization:** Convert `src/assets/hero-bg.png` (2.6 MB) to WebP or AVIF format to improve initial page load performance.
+4. ~~**Hero Image Optimization:** Convert `src/assets/hero-bg.png` (2.6 MB) to WebP or AVIF format.~~ ✅ **Done** — Converted to `hero-bg.webp` (0.23 MB); **90.6% reduction**. `Hero.jsx` updated to import `.webp`.

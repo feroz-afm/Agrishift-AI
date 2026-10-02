@@ -1,4 +1,4 @@
-import heroBg from "../assets/hero-bg.png";
+import heroBg from "../assets/hero-bg.webp";
 import { Play, ArrowRight, ChevronDown, Satellite } from "lucide-react";
 
 export default function Hero({ onOpenModal }) {
