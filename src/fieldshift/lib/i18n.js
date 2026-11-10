@@ -135,6 +135,9 @@ const S = {
   demo: { bn: 'ডেমো তথ্য', en: 'Demo data' },
   demoNote: { bn: 'ইন্টারনেট নেই বলে নমুনা তথ্য দেখানো হচ্ছে — আসল তথ্য নয়', en: 'No internet: showing sample data — not real' },
   tryDemo: { bn: 'নমুনা তথ্য দিয়ে দেখুন', en: 'Explore with sample data' },
+  demoFields: { bn: 'ডেমো জমি (আসল নাসা তথ্য)', en: 'Demo fields (real NASA data)' },
+  demoFieldsSub: { bn: 'এক ট্যাপে সারিয়াকান্দির চর, কাহালু বা রাজশাহীর বরেন্দ্র দেখুন', en: 'One tap: Sariakandi char land, Kahaloo or Rajshahi Barind' },
+  viaBackend: { bn: 'সার্ভার থেকে', en: 'via server' }, viaDirect: { bn: 'সরাসরি নাসা থেকে', en: 'direct from NASA' }, viaBundled: { bn: 'অ্যাপে সংরক্ষিত আসল তথ্য', en: 'real data bundled in app' },
   aiFree: { bn: 'প্রতিটি সংখ্যার উৎস দেখা যায় · কোনো ব্ল্যাক-বক্স AI নেই', en: 'Every number shows its source · no black-box AI' },
 };
 
