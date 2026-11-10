@@ -1,8 +1,89 @@
 # AgriShift AI
 
+**NASA Space Apps Challenge 2026 — Field Shift: Adapting Farms with NASA Data**
+
+AgriShift AI turns NASA Earth observations into climate-resilient crop-rotation plans for Bangladeshi farmers — in Bangla, on any phone, even offline.
+
+- **Landing page:** `/`
+- **Working app (Field Shift):** `/#/app` — installable on Android / iPhone, works on laptops
+- **Backend API:** `/api/*` — fetches and caches NASA data server-side and runs the rotation engine
+
+## Quick start
+
+```bash
+npm install
+npm run dev          # app + API on http://localhost:5173  (phone on same Wi-Fi: use the Network URL)
+npm test             # engine + backend tests (NASA mocked)
+npm run fetch-data   # download REAL NASA data for Sariakandi, Kahaloo, Rajshahi into public/data/
+npm run build && npm start   # production server on http://localhost:3000
+```
+
+## Deploy (free) and use on a phone
+
+1. Push this branch to GitHub → import the repo on **vercel.com** → Deploy. `vercel.json` sets up the Vite build and the `/api/*` serverless functions.
+2. Open `https://<your-app>.vercel.app/#/app` on the phone:
+   - **Android:** Chrome ⋮ → *Add to Home screen*
+   - **iPhone:** Safari → Share → *Add to Home Screen*
+3. GPS, Bangla voice input and offline install need HTTPS — the Vercel URL has it.
+
+## Backend API
+
+| Endpoint | What it returns |
+|---|---|
+| `GET /api/health` | Service status |
+| `GET /api/power?lat=&lon=` | NASA POWER daily (2001→): T2M, T2M_MAX, T2M_MIN, PRECTOTCORR, GWETROOT, GWETTOP, RH2M, ALLSKY_SFC_SW_DWN |
+| `GET /api/ndvi?lat=&lon=` | MODIS MOD13Q1 250 m NDVI, ~3 years (ORNL DAAC) |
+| `GET /api/soil?lat=&lon=` | ISRIC SoilGrids 2.0 topsoil: clay, sand, silt, SOC, pH, N |
+| `GET /api/field?lat=&lon=` | All three in one call (used by the app) |
+| `GET /api/plan?preset=sariakandi&priority=water` | Full server-side analysis + ranked rotations. Also `lat`, `lon`, `irrigation=none\|limited\|full`, `current=rice_aman,rice_boro,fallow`, `future=1`, `saline=1` |
+
+Responses are cached in memory and at the CDN (`s-maxage`), so NASA is called at most a few times a day per location.
+
+## Data flow in the app
+
+backend `/api/field` → NASA directly from the browser → real NASA data bundled in `public/data/` → last copy saved on the device. Sample data is only used when the user taps "explore with sample data", and is always labelled.
+
+## Demo fields
+
+| Field | Why it is interesting |
+|---|---|
+| **Sariakandi, Bogura** | Jamuna char land — monsoon river floods, sandy soils |
+| **Kahaloo, Bogura** | Western Bogura on the Barind edge — Boro irrigation and dry-season water stress |
+| **Rajshahi (Barind)** | Drought, falling groundwater |
+
+## How the engine works
+
+- **ET₀:** Hargreaves from NASA POWER daily Tmax/Tmin and latitude. Crop water = Kc × ET₀ (FAO-56).
+- **Irrigation need** = crop water − effective rain (80%) − stored soil moisture in Rabi, plus paddy percolation.
+- **Risk** = damaging heat/cold days for each crop in the last 10 years of NASA daily data + district hazards (salinity, haor flash floods, Barind drought, char floods).
+- **Soil score** = legumes and green manure, crop-family diversity, deep roots, residue; penalties for bare land and repeating families.
+- **2040** = linear trend of temperature and rain since 2001, applied to the same daily record.
+- **Monsoon drift** = onset and withdrawal detected each year, first 10 years vs last 10 years.
+
+## Code map
+
+```
+api/                  Vercel serverless functions (thin wrappers)
+server/handlers.js    Backend logic: NASA fetch + cache, /field, /plan
+server/vite-api.js    Serves the API inside `npm run dev`
+server/index.js       Standalone Node server (Render, Railway, laptop)
+scripts/fetch-data.mjs  Bundle real NASA data for offline demos
+src/fieldshift/       The app: lib/ (engine, analysis, i18n, assistant), screens/, components
+src/components/       Landing page
+tests/                node --test suites
+```
+
+## Limitations (stated honestly)
+
+NASA POWER cells are ~50 km, so weather describes the area, not one field. Soil moisture comes from POWER GWETROOT (MERRA-2 model), not SMAP retrievals. SoilGrids is a modelled estimate, not a soil test. The return index is relative, not money. Confirm varieties and fertiliser with the Upazila agriculture office.
+
+---
+
+## Landing page (original notes)
+
 Landing page for **AgriShift AI** — an AI-powered agriculture platform that turns NASA Earth observation data into crop recommendations for climate-resilient farming.
 
-Currently a **frontend-only** single-page marketing site. There is no backend, no routing, and no data layer yet.
+The landing page links to the working app at `#/app`.
 
 ---
 
