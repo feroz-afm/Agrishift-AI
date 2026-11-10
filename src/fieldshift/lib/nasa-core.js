@@ -117,7 +117,15 @@ export async function fetchJSON(url, opts = {}, timeoutMs = 45000) {
   const t = setTimeout(() => ctrl.abort(), timeoutMs);
   try {
     const res = await fetch(url, { ...opts, signal: ctrl.signal });
-    if (!res.ok) throw new Error(`HTTP ${res.status} from ${new URL(url).host}`);
+    if (!res.ok) {
+      let detail = '';
+      try { detail = (await res.json()).error || ''; } catch { /* not JSON */ }
+      let where = url;
+      try { where = new URL(url, 'http://local').host; } catch { /* keep url */ }
+      throw new Error(`HTTP ${res.status} from ${where}${detail ? ': ' + detail : ''}`);
+    }
+    const type = res.headers?.get ? res.headers.get('content-type') || '' : 'application/json';
+    if (type && !type.includes('json')) throw new Error(`not JSON from ${url}`);
     return await res.json();
   } finally {
     clearTimeout(t);
