@@ -169,10 +169,10 @@ export default function Hero({ onOpenModal }) {
           transition={{ duration: 0.6, delay: 0.5 }}
         >
           <a
-            href="#farm-simulation"
+            href="#/app"
             className="inline-flex items-center gap-2.5 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-400 hover:to-emerald-400 text-black px-8 py-4 rounded-2xl font-bold text-base shadow-xl shadow-green-500/30 hover:shadow-green-400/50 hover:scale-[1.03] transition-all duration-300"
           >
-            Explore Demo Farm
+            Open the App
             <ArrowRight className="w-4 h-4" />
           </a>
           <a

@@ -67,7 +67,7 @@ export default function Navbar({ onOpenModal }) {
             Live Telemetry
           </button>
           <a
-            href="#features"
+            href="#/app"
             className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-400 hover:to-emerald-400 text-black font-bold text-sm shadow-lg shadow-green-500/25 hover:shadow-green-400/40 transition-all duration-200 focus-visible:outline-2 focus-visible:outline-green-400"
           >
             Get Started →
@@ -104,7 +104,7 @@ export default function Navbar({ onOpenModal }) {
           ))}
           <div className="section-divider my-3" />
           <a
-            href="#features"
+            href="#/app"
             onClick={() => setMobileMenuOpen(false)}
             className="py-3 text-center rounded-xl bg-gradient-to-r from-green-500 to-emerald-500 text-black font-bold text-sm shadow-lg shadow-green-500/25 transition-all duration-200"
           >
