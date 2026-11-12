@@ -62,6 +62,10 @@ npm run dev
 
 **Quick look (same Wi-Fi):** run `npm run dev` and open `http://<Network-IP>:5173/#/app` on the phone. On Windows, allow **Node.js** through the firewall if the page does not load.
 
+> GPS, voice input and "Add to Home Screen" only work on **HTTPS**, so use a deployed link for demos and videos.
+
+**Deploy (free, HTTPS):**
+
 ---
 
 ## Landing page (original notes)
