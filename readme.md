@@ -14,6 +14,21 @@ AgriShift AI turns NASA Earth observations into **climate-resilient crop-rotatio
 
 ## ✨ Features
 
+- **Pick a field:** 64 districts, GPS, tap on the map, or one-tap demo fields (**Sariakandi**, **Kahaloo**, **Rajshahi**). Bangladesh only.
+- **Real NASA data:** NASA POWER daily weather and soil wetness since 2001, MODIS 250 m NDVI, and ISRIC SoilGrids soil properties.
+- **Monsoon drift:** monsoon onset and withdrawal detected for every year; the 2001–10 window is compared with 2016–25.
+- **Rotation planner:** ranks Aman → Rabi → Kharif-1 rotations from 22 crops by soil health, irrigation need, return and climate risk, and compares them with what the farmer grows now.
+- **2040 climate test:** the NASA trend since 2001 is projected forward and the plans are re-scored.
+- **Bangladesh hazards:** coastal salinity, haor flash floods, Barind drought, char/river floods, northern cold waves.
+- **"Why?" for every plan:** plain-Bangla reasons, the formulas used, and BRRI/BARI variety tips.
+- **Alerts:** flash drought, heat wave, heavy rain, cold wave.
+- **Voice assistant:** ask in Bangla (`bn-BD`) by voice or text and hear the answer. Works offline and shows the source of each answer.
+- **Map:** opens on a normal street map zoomed to the field with a pin, plus a **satellite photo** mode. Optional **NASA GIBS** overlays: NDVI greenness, land surface temperature, GPM IMERG rain.
+- **Works offline:** installable PWA; the last data is saved on the device; real NASA data can be bundled for the demo fields.
+- **Bangla first:** Bangla text and digits, with a one-tap English toggle for judges.
+
+---
+
 ---
 
 ## Landing page (original notes)
