@@ -96,6 +96,10 @@ Results are cached in memory and at the CDN (`s-maxage`), so NASA is called at m
 
 ---
 
+## 📍 Demo fields
+
+---
+
 ## Landing page (original notes)
 
 Landing page for **AgriShift AI** — an AI-powered agriculture platform that turns NASA Earth observation data into crop recommendations for climate-resilient farming.
