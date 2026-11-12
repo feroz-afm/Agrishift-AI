@@ -162,6 +162,8 @@ tests/                   node --test suites
 
 ---
 
+## ⚠️ Limitations (stated honestly)
+
 ---
 
 ## Landing page (original notes)
