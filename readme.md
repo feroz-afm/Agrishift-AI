@@ -38,6 +38,26 @@ npm install          # first time only
 npm run dev          # app + API → http://localhost:5173/#/app
 ```
 
+| Command | What it does |
+|---|---|
+| `npm run dev` | Dev server with the backend API. Prints a **Network** URL for phones on the same Wi-Fi |
+| `npm run build` | Production build into `dist/` |
+| `npm start` | Production server (built app + API) → `http://localhost:3000/#/app` |
+| `npm run preview` | Serves the build with the API, for checking before deploy |
+| `npm test` | Engine, assistant and backend tests (NASA mocked, no internet needed) |
+| `npm run fetch-data` | Downloads **real** NASA data for Sariakandi, Kahaloo and Rajshahi into `public/data/` |
+
+### বাংলায় সংক্ষেপে
+```bash
+npm install
+npm run dev
+```
+- **ল্যাপটপে:** `http://localhost:5173/#/app`
+- **ফোনে** (একই Wi-Fi): টার্মিনালে দেখানো `Network: http://192.168.x.x:5173/` লিংকের শেষে `#/app` যোগ করে খুলুন।
+- বন্ধ করতে: **Ctrl + C**
+
+---
+
 ---
 
 ## Landing page (original notes)
