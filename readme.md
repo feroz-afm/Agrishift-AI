@@ -92,6 +92,8 @@ npm run dev
 
 Results are cached in memory and at the CDN (`s-maxage`), so NASA is called at most a few times a day per location. The same handlers run on Vercel (`api/`), inside `npm run dev` (`server/vite-api.js`), and on any Node host (`server/index.js`).
 
+**Data flow in the app:** backend `/api/field` → NASA directly from the browser → real data bundled in `public/data/` → last copy saved on the device. Sample data is only used when the user taps *"Explore with sample data"*, and it is always labelled.
+
 ---
 
 ## Landing page (original notes)
