@@ -112,6 +112,16 @@ git add public/data && git commit -m "data: real NASA data for demo fields" && g
 
 ---
 
+## 🧮 How the engine works
+
+- **ET₀:** Hargreaves method from NASA POWER daily Tmax/Tmin and latitude. Crop water = Kc × ET₀ (FAO-56).
+- **Irrigation need** = crop water − effective rain (80%) − stored soil moisture in Rabi, plus paddy percolation.
+- **Risk:** damaging heat or cold days for each crop in the last 10 years of NASA daily data, plus district hazards (salinity, haor, Barind, char floods, cold).
+- **Soil score:** rewards legumes, green manure, crop-family diversity, deep roots and residue; penalises bare land and the same family twice in a row.
+- **2040:** the linear temperature and rain trend since 2001, applied to the same daily record.
+- **Monsoon drift:** yearly onset and withdrawal from daily rain, with thresholds scaled to local rainfall so pre-monsoon storms do not count.
+- **Field health (0–100):** soil wetness percentile, recent heat, and NDVI against its own history.
+
 ---
 
 ## Landing page (original notes)
