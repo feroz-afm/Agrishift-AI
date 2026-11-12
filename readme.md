@@ -195,6 +195,8 @@ tests/                   node --test suites
 
 ---
 
+---
+
 ## Landing page (original notes)
 
 Landing page for **AgriShift AI** — an AI-powered agriculture platform that turns NASA Earth observation data into crop recommendations for climate-resilient farming.
