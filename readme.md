@@ -66,6 +66,13 @@ npm run dev
 
 **Deploy (free, HTTPS):**
 
+- **Option A, Vercel CLI from this folder:**
+  ```bash
+  npx vercel          # log in with GitHub, press Enter for the defaults
+  npx vercel --prod   # permanent production URL
+  ```
+- **Option B, Vercel dashboard:** import `feroz-afm/Agrishift-AI` on vercel.com and deploy. `vercel.json` already sets up the Vite build and the `/api/*` serverless functions.
+
 ---
 
 ## Landing page (original notes)
