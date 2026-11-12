@@ -195,6 +195,10 @@ tests/                   node --test suites
 
 ---
 
+## License
+
+Built for NASA Space Apps Challenge 2026. NASA data is public domain; follow each provider's attribution terms (OpenStreetMap, Esri, ISRIC).
+
 ---
 
 ## Landing page (original notes)
