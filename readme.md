@@ -98,6 +98,20 @@ Results are cached in memory and at the CDN (`s-maxage`), so NASA is called at m
 
 ## 📍 Demo fields
 
+| Field | Why it matters |
+|---|---|
+| **Sariakandi, Bogura** | Jamuna char land: monsoon river floods, sandy soils |
+| **Kahaloo, Bogura** | Western Bogura on the Barind edge: Boro irrigation, dry-season water stress |
+| **Rajshahi (Barind)** | Drought and falling groundwater |
+
+To make the demo fields work fully offline with real data, run this on a computer with internet:
+```bash
+npm run fetch-data
+git add public/data && git commit -m "data: real NASA data for demo fields" && git push
+```
+
+---
+
 ---
 
 ## Landing page (original notes)
