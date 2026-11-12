@@ -145,6 +145,10 @@ src/
 tests/                   node --test suites
 ```
 
+**Stack:** React 19, Vite 7, Tailwind CSS 4 (landing page), Leaflet, Hind Siliguri / Space Grotesk / JetBrains Mono (bundled, so they work offline), Node 20+ backend.
+
+---
+
 ---
 
 ## Landing page (original notes)
