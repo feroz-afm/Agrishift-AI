@@ -33,6 +33,11 @@ AgriShift AI turns NASA Earth observations into **climate-resilient crop-rotatio
 
 **Requirements:** Node.js **20.19+** (check with `node -v`).
 
+```bash
+npm install          # first time only
+npm run dev          # app + API → http://localhost:5173/#/app
+```
+
 ---
 
 ## Landing page (original notes)
