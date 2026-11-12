@@ -164,6 +164,15 @@ tests/                   node --test suites
 
 ## ⚠️ Limitations (stated honestly)
 
+- NASA POWER cells are about 50 km, so the weather describes the area, not one field.
+- Soil moisture comes from POWER GWETROOT (MERRA-2 model), not SMAP retrievals.
+- NASA GIBS overlays are 250 m – 10 km pixels and look blocky when zoomed into one field.
+- SoilGrids is a modelled estimate, not a soil test.
+- The return index is relative, not money.
+- Confirm varieties and fertiliser with the Upazila agriculture office.
+
+---
+
 ---
 
 ## Landing page (original notes)
