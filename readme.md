@@ -124,6 +124,27 @@ git add public/data && git commit -m "data: real NASA data for demo fields" && g
 
 ---
 
+## 🗂️ Code map
+
+```
+api/                     Vercel serverless functions (thin wrappers)
+server/
+  handlers.js            Backend: NASA fetch + cache, /field, /plan
+  vite-api.js            Serves the API inside `npm run dev` / `preview`
+  index.js               Standalone Node server (Render, Railway, laptop)
+scripts/fetch-data.mjs   Bundles real NASA data for offline demos
+public/                  PWA manifest, icons, service worker, data/
+src/
+  App.jsx                Landing page + #/app routing
+  components/            Landing page sections
+  fieldshift/            The Field Shift app
+    FieldShiftApp.jsx    App shell (bottom nav on phones, sidebar on laptops)
+    MapBox.jsx           Leaflet map: street/satellite base, field pin, NASA GIBS overlays
+    screens/             Setup, Field, Plan, MapView, Ask, DataInfo
+    lib/                 Engine, climate analysis, NASA access, crops, districts, i18n, assistant
+tests/                   node --test suites
+```
+
 ---
 
 ## Landing page (original notes)
