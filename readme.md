@@ -187,6 +187,12 @@ tests/                   node --test suites
 
 ---
 
+## 🌿 Git workflow
+
+- `main`: stable. `final`: latest version, including the map update. Feature work happens on branches and is merged with Pull Requests.
+- `node_modules/`, `dist/`, `.env*` and logs are ignored.
+- Before pushing: `npm test && npm run build`.
+
 ---
 
 ## Landing page (original notes)
