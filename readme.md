@@ -58,6 +58,10 @@ npm run dev
 
 ---
 
+## 📱 Use on a phone
+
+**Quick look (same Wi-Fi):** run `npm run dev` and open `http://<Network-IP>:5173/#/app` on the phone. On Windows, allow **Node.js** through the firewall if the page does not load.
+
 ---
 
 ## Landing page (original notes)
