@@ -149,6 +149,19 @@ tests/                   node --test suites
 
 ---
 
+## 📚 Data sources
+
+| Dataset | Used for |
+|---|---|
+| **NASA POWER** Daily API (AG community) | Weather, ET₀, monsoon onset, heat days, soil wetness, 2040 trend |
+| **MODIS MOD13Q1 v6.1** (ORNL DAAC web service) | Field greenness and health |
+| **NASA GIBS** WMTS (MODIS NDVI, MODIS LST, GPM IMERG) | Map overlays |
+| **ISRIC SoilGrids 2.0** | Soil texture, organic carbon, pH |
+| **FAO-56, FAO Ecocrop, BRRI/BARI** calendars | Crop water need, temperature limits, seasons, variety tips |
+| OpenStreetMap, Esri World Imagery | Base maps |
+
+---
+
 ---
 
 ## Landing page (original notes)
