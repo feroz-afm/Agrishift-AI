@@ -2,6 +2,8 @@
 
 **NASA Space Apps Challenge 2026 — Challenge: "Field Shift: Adapting Farms with NASA Data"**
 
+AgriShift AI turns NASA Earth observations into **climate-resilient crop-rotation plans for Bangladeshi farmers**: in Bangla, on any phone, even offline.
+
 ---
 
 ## Landing page (original notes)
