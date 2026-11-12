@@ -124,6 +124,8 @@ git add public/data && git commit -m "data: real NASA data for demo fields" && g
 
 ---
 
+---
+
 ## Landing page (original notes)
 
 Landing page for **AgriShift AI** — an AI-powered agriculture platform that turns NASA Earth observation data into crop recommendations for climate-resilient farming.
