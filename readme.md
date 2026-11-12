@@ -73,6 +73,12 @@ npm run dev
   ```
 - **Option B, Vercel dashboard:** import `feroz-afm/Agrishift-AI` on vercel.com and deploy. `vercel.json` already sets up the Vite build and the `/api/*` serverless functions.
 
+**Install on the phone:** open `https://<your-app>.vercel.app/#/app`, then:
+- **Android:** Chrome ⋮ → **Add to Home screen**
+- **iPhone:** Safari → Share → **Add to Home Screen**
+
+---
+
 ---
 
 ## Landing page (original notes)
