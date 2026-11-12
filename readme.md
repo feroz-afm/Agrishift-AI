@@ -4,6 +4,16 @@
 
 AgriShift AI turns NASA Earth observations into **climate-resilient crop-rotation plans for Bangladeshi farmers**: in Bangla, on any phone, even offline.
 
+| Part | Where | What it is |
+|---|---|---|
+| Landing page | `/` | Project story, NASA data, impact |
+| **Field Shift app** | `/#/app` | The working app. Installable on Android / iPhone, runs on laptops |
+| **Backend API** | `/api/*` | Fetches and caches NASA data on the server and runs the rotation engine |
+
+---
+
+## ✨ Features
+
 ---
 
 ## Landing page (original notes)
