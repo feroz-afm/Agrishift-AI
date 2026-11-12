@@ -173,6 +173,20 @@ tests/                   node --test suites
 
 ---
 
+## 🛠️ Troubleshooting
+
+| Problem | Fix |
+|---|---|
+| `'vite' is not recognized` | Dependencies are missing. Run `npm install` |
+| `running scripts is disabled` (PowerShell) | `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned`, or switch the terminal to Command Prompt |
+| Phone cannot open the Network URL | Use the same Wi-Fi, and allow **Node.js** through Windows Firewall (Private + Public) |
+| GPS / mic / install not working on the phone | These need HTTPS. Use the Vercel link |
+| "Could not load NASA data" | Check internet, then press *Try again*. NASA APIs can be slow; the first load takes 10–40 s |
+| Map tiles blank | Check internet. NASA overlays can take a few seconds to load |
+| Engine warning on start | Upgrade Node to 20.19+ |
+
+---
+
 ---
 
 ## Landing page (original notes)
