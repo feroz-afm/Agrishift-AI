@@ -79,6 +79,19 @@ npm run dev
 
 ---
 
+## 🔌 Backend API
+
+| Endpoint | Returns |
+|---|---|
+| `GET /api/health` | Service status |
+| `GET /api/power?lat=&lon=` | NASA POWER daily, 2001→: T2M, T2M_MAX, T2M_MIN, PRECTOTCORR, GWETROOT, GWETTOP, RH2M, ALLSKY_SFC_SW_DWN |
+| `GET /api/ndvi?lat=&lon=` | MODIS MOD13Q1 250 m NDVI, about 3 years (ORNL DAAC) |
+| `GET /api/soil?lat=&lon=` | SoilGrids 2.0 topsoil: clay, sand, silt, SOC, pH, N |
+| `GET /api/field?lat=&lon=` | All three in one call (used by the app) |
+| `GET /api/plan?preset=sariakandi&priority=water` | Full server-side analysis and ranked rotations. Also takes `lat`, `lon`, `irrigation=none\|limited\|full`, `current=rice_aman,rice_boro,fallow`, `future=1`, `saline=1` |
+
+Results are cached in memory and at the CDN (`s-maxage`), so NASA is called at most a few times a day per location. The same handlers run on Vercel (`api/`), inside `npm run dev` (`server/vite-api.js`), and on any Node host (`server/index.js`).
+
 ---
 
 ## Landing page (original notes)
