@@ -153,3 +153,5 @@ table.data th { color: var(--muted); font-weight: 600; }
 }
 @keyframes pulse { 50% { box-shadow: 0 0 0 10px rgba(242, 165, 65, 0.2); } }
 @keyframes spin { to { transform: rotate(360deg); } }
+.leaflet-tooltip.fs-pin-label { background: #0D1412; color: #E8F0EC; border: 1px solid #B8E35C; border-radius: 8px; font-family: 'Hind Siliguri', sans-serif; font-size: 13px; font-weight: 600; padding: 2px 8px; box-shadow: none; }
+.leaflet-tooltip.fs-pin-label::before { border-top-color: #B8E35C; }
